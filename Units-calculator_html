@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soso's Exercise</title>
+  <link rel="stylesheet" href="styles.css">
+  
+</head>
+<body>
+  <div class="wrapper_container" >
+    <header>
+      Units Calculator 
+    </header>
+    <div class="row">
+      <input  type="number" placeholder="Enter the amount" name="" id="unit_length" required>
+    </div>
+    <div class="row">
+      <select name=""  id="from_unit" required>
+          <option value="" disabled selected>Select Unit</option>
+          <option value="km">Kilometers (km)</option>
+          <option value="mi">Miles (mi)</option>
+          <option value="m">Meters (m)</option>
+          <option value="yd">Yards (yd)</option>
+      </select>
+    </div>
+    <div class="row">
+      <select  placeholder="Select Unit" name="" id="to_unit" required>
+        <option value="" disabled selected>Select Unit</option>
+        <option value="km">Kilometers (km)</option>
+        <option value="mi">Miles (mi)</option>
+        <option value="m">Meters (m)</option>
+        <option value="yd">Yards (yd)</option>
+      </select>
+    </div>
+    <button   id="calculation_output" onclick="
+    document.getElementById('output').innerText= convertDistance(`${unitLength.value}`,`${fromUnit.value}`,`${toUnit.value}`)
+    ">
+    Submit
+    </button>
+    <div class="result"><p id="output"></p>
+    </div>
+    
+  </div>
+  
+
+  <script src="index.js">
+  </script>
+</body>
+</html>
